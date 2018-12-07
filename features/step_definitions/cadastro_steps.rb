@@ -1,11 +1,7 @@
-  Dado("que estou na página inicial") do                                          
-    @login_page.acessa   
-  end                                                                             
-                                                                                  
-  Quando("informo meu nome {string} e e-mail {string}") do |nome, email|      
-    @loginPage.cadastro(nome, email)
-  end                                                                             
-                                                                                  
-  Então("devo ver a seguinte mensagem {string}") do |string|                      
-    pending # Write code here that turns the phrase above into concrete actions   
-  end                                                                             
+Quando("completo o meu cadastro com {string} e {string}") do |string, string2|
+    @Completar_cadastro.dados_cadastro
+end
+  
+Então("vejo a seguinte mensagem de confirmação {string}") do |string|
+    pending # Write code here that turns the phrase above into concrete actions
+end
