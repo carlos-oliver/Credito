@@ -5,8 +5,9 @@ Funcionalidade: Cadastrar novo usuário
     informando meus dados pessoais
 
 
-@login1
+@login
 Cenario: Cadastrar novo usuário
         Dado que estou na página inicial 
         Quando informo meu nome "Fernando Santos" e e-mail "Fernando@teste.com" 
+        E preencho os dados cadastrais "01/01/1989" e "1000,00"
         Então devo ver a seguinte mensagem "Olá Fernando, precisamos saber um pouco sobre você."
