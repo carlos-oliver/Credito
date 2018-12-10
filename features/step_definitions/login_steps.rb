@@ -7,8 +7,8 @@
     @login_page.cpf
   end     
  
-  Quando("preencho os dados cadastrais {string} e {string}") do |data_n, salario|
-    @login_page.dados(data_n, salario)
+  Quando("preencho os dados cadastrais {string} e {string}") do |data_n, salario, ocupacao, profissao|
+    @login_page.dados(data_n, salario, ocupacao, profissao)
   end
   
 

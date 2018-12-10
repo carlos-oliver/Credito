@@ -22,10 +22,20 @@ class LoginPage
     find('input[formcontrolname=cpf]').set cpf
   end
 
-  def dados(data_nasc, salario)
+  def dados(data_nasc, salario, ocupacao, profissao)
     find('input[formcontrolname=dateOfBirth]').set data_nasc
     find('input[formcontrolname=monthlyGrossIncome]').set salario
-    click_on '.ng-untouched ng-pristine radio-btn-active radio-btn ng-valid[class=Masculino]'    
+    click_on '.ng-untouched ng-pristine radio-btn-active radio-btn ng-valid[class=Masculino]' 
+    find('#borrower.maritalStatus')
+    find('select[name="jobType[Selecione]"').find(:xpath, 'option['+ ocupacao +']').select_option
+    find('select[name="profession[Selecione]"').find(:xpath, 'option['+ profissao +']').select_option  
+    find('select[name="educationLevel[Selecione]"').find(:xpath, 'option['+ Superior Completo +']').select_option  
+    find('select[name="bankNumber[Selecione]"').find(:xpath, 'option['+  Bradesco +']').select_option
+    click_on 'hasCheckbook' 
+    click_on 'hasNegativeCreditRecord'
+    click_on 'hasProperty'
+    click_on 'hasVehicle'
+    click_on 'CONTINUAR'   
   end
   
 end
